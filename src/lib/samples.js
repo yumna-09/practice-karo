@@ -1,0 +1,9 @@
+// Built-in practice pictures, generated locally so learners without photos can still practise.
+const svg = (body, a, b) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="640" height="480" fill="url(#g)"/>${body}</svg>`
+const uri = (s) => 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(s)
+
+export const SAMPLE_IMAGES = [
+  { name: 'Sunset garden.svg', url: uri(svg('<circle cx="450" cy="250" r="70" fill="#FFE3A3"/><path d="M0 360 Q160 290 320 350 T640 330 V480 H0Z" fill="#2f6b4f"/><path d="M0 410 Q200 360 400 410 T640 400 V480 H0Z" fill="#1f4d3a"/><g fill="#f7b6c2"><circle cx="90" cy="400" r="14"/><circle cx="150" cy="420" r="12"/><circle cx="560" cy="405" r="13"/></g>', '#ff9a76', '#ffd98a')) },
+  { name: 'Mountain lake.svg', url: uri(svg('<path d="M0 320 L150 150 L260 260 L380 100 L520 270 L640 190 V480 H0Z" fill="#41607a"/><path d="M0 380 H640 V480 H0Z" fill="#78b4c9" opacity=".8"/><circle cx="520" cy="90" r="36" fill="#fff6d9"/>', '#9ed0ee', '#e8f4fb')) },
+  { name: 'Family tea time.svg', url: uri(svg('<rect x="190" y="250" width="260" height="30" rx="8" fill="#8a5a3b"/><rect x="230" y="280" width="16" height="120" fill="#6e452b"/><rect x="394" y="280" width="16" height="120" fill="#6e452b"/><ellipse cx="270" cy="236" rx="40" ry="14" fill="#fff"/><path d="M232 210 h76 v26 q-38 24 -76 0z" fill="#fff"/><path d="M308 218 q26 4 0 26" stroke="#fff" stroke-width="8" fill="none"/><ellipse cx="380" cy="236" rx="40" ry="14" fill="#fff"/><path d="M342 210 h76 v26 q-38 24 -76 0z" fill="#fff"/><g stroke="#fff" stroke-width="5" fill="none" opacity=".7"><path d="M270 190 q-12 -20 0 -36"/><path d="M380 190 q-12 -20 0 -36"/></g>', '#f2a36e', '#f9dcb0')) },
+]
