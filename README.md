@@ -1,162 +1,221 @@
 # Digital Dost
 
-**Learn everyday technology. Practise safely. Build confidence.**
+**Team:** Shadowblades  
+**Members:** Yumna Kashif, Fatima Ali, Fatima Ashraf  
+**Event:** Build4Better, Codesphere 3.0 — NED University of Engineering and Technology  
+**Build date:** Saturday, 31 October 2026 (9:00 AM to 5:00 PM PKT)  
+**Project type:** Responsive web app for digital-literacy practice  
+**Built with:** React 19, Vite, CSS, lucide-react
 
-Digital Dost is a guided digital-literacy experience for parents, grandparents, and adults who want to feel more confident using everyday technology. It combines simulated practice, clear task instructions, and online-safety education in an accessible interface.
+> A calm, safe place where parents and grandparents can practise everyday technology, spot scams and build confidence, instead of calling their children every time they get stuck.
 
-> Learn at your own pace, with practical guidance and a safe place to practise.
+---
 
-## Project overview
+## Submission details
 
 | Item | Details |
 |---|---|
-| Product | Digital Dost |
-| Category | Digital literacy and online safety |
-| Event | Build4Better — Codesphere 3.0 |
-| Team | Yumna Kashif, Fatima Ali, Fatima Ashraf |
-| Application | Responsive React web application |
-| Repository | [fatimaashraf3/digital-dost](https://github.com/fatimaashraf3/digital-dost) |
-| Development branch | Local working copy; changes have not been pushed |
-| Deployment | Not yet verified |
-| Status | Glass UI, live practice chat, scam checker and media sharing implemented; lint and build pass, desktop and mobile layouts checked in headless Chromium |
+| **GitHub repository** | [github.com/yumna-09/digital-dost](https://github.com/yumna-09/digital-dost) |
+| **Demo video (max 2 min)** | [Watch the demo](https://drive.google.com/file/d/1R6a5J5DRRDAoKnSuZ6k6sBMAA3wkRipi/view?usp=sharing) |
+| **Pitch deck** | [View the pitch deck](https://docs.google.com/presentation/d/1sb7Dtim4ye80ItaxpeiSt_TMjyO6z-EC/edit?usp=drivesdk&ouid=111669070603267105976&rtpof=true&sd=true) |
 
-## Product principles
+---
 
-- **Learn by doing:** practise common tasks in clearly labelled simulations.
-- **Patient guidance:** break unfamiliar tasks into manageable steps.
-- **Safety first:** never connect practice flows to real accounts or financial services.
-- **Accessible by default:** prioritise legible type, clear contrast, keyboard focus, reduced motion, and forgiving interactions.
-- **Honest assistance:** distinguish guided, predefined content from live AI services.
+## The problem
 
-## Current learning areas
+**Who it is for:** Parents, grandparents and other adults who did not grow up with technology and feel unsure about smartphones, messaging, photos, links and online safety.
 
-### Learning home and guided companion
-The home screen provides a task-oriented starting point and suggested topics. The companion currently uses local, predefined guidance and keyword matching. It is not connected to a live AI model or external AI API.
+Many people get stuck on everyday digital tasks that feel simple to younger generations. They may struggle to use a chat app, send a photo or recognise a scam message. When they get stuck, they often call family members for help. Some avoid useful digital tools altogether because they are afraid of making mistakes.
 
-### WhatsApp practice
-Four simulated contacts (Ayesha, Cousin Bilal, Dost Coach and a scam-practice "Prize Centre") reply in real time with typing indicators, sent/delivered/read ticks, unread badges and an emoji picker. Replies come from a local rule-based engine (`src/lib/replyEngine.js`), not a live AI and not real people. Learners can attach photos, block and report the scam contact, and tap "Check this message" to send a suspicious message to the scam checker. Chats live in memory and reset on reload.
+The issue is not intelligence. Technology is often built for people who already speak its language.
 
-### Share a photo
-A guided four-step lesson beside a live practice chat. The **Add media** sheet supports gallery selection (multiple), camera capture on phones, drag and drop, built-in sample pictures, captions, up to six pictures at a time (8 MB each) and an enlarged preview. Images stay in the browser; nothing is uploaded.
+## Our solution
 
-### Spot a scam
-Paste any message and get a risk score, a verdict (very likely a scam / suspicious / no common warning signs), highlighted phrases, plain-language reasons and safe next steps. It is a **rules-based, on-device helper** (`src/lib/scamEngine.js`) covering urgency, threats, prizes, OTP/PIN/CNIC requests, money requests, shortened links, impersonation, "new number" tricks and investment promises, including common Pakistani context (Easypaisa, JazzCash, BISP, HBL, CNIC). It cannot guarantee a message is safe and is not a live AI service. A second tab keeps the fictional practice quiz.
+Digital Dost is a practice space where learners can try common digital tasks in a clearly labelled simulation, one step at a time, with plain language and no risk.
 
-### Learning progress
-Practice and review counters are stored in browser local storage. They are local to the current browser profile and are not synchronised between devices.
+The app explains what an action does **before** asking the learner to do it, then provides friendly feedback afterwards.
 
-### Accessibility and preferences
-The settings interface includes:
-- A draggable 90%-125% text-size control.
-- A higher-contrast preference.
-- A reduced-motion preference.
-- Read-aloud on/off, pause/resume, and stop controls.
-- Speech-rate options and selection from voices exposed by the current browser/device.
+It brings people closer to technology instead of doing things for them.
 
-Speech is provided by the browser Web Speech API. Available voices and pronunciation vary by operating system and browser. Roman Urdu support currently uses a small curated phrase map; it does **not** translate arbitrary English content. A complete translation experience requires a separately selected and tested translation solution.
+### Product principles
 
-## Technology
+- **Teach one task at a time.**
+- **Explain first, then practise.** No judgement; repetition is welcome.
+- **Safe by design.** Nothing connects to real accounts, banks or contacts.
+- **Honest.** The app always says what is local, predefined or simulated.
 
-| Technology | Purpose |
+## Core features
+
+| Feature | What the learner does |
 |---|---|
-| React 19 | Component-based user interface |
-| JavaScript (ES modules) | Application logic |
-| Vite | Development server and production build |
-| CSS | Responsive teal glassmorphism design system and accessibility preferences |
-| lucide-react | Icon set |
-| @fontsource (Manrope, DM Sans) | Self-hosted fonts |
-| Browser Web Speech API | Device-provided speech synthesis |
-| Browser object URLs and file inputs | Local image preview, gallery, camera and drag-and-drop |
-| Local storage | Guest preferences and demo progress |
-| Git and GitHub | Version control and collaboration |
+| **Learning home** | Picks a task from a clear start page and sees their progress. |
+| **WhatsApp practice** | Chats with four practice contacts (a friend, a cousin, a guide and a scam sender). Sees typing indicators, sent / delivered / read ticks, unread badges and an emoji picker. |
+| **Share a photo** | Follows a four-step lesson, then adds pictures from the gallery, the camera, drag and drop or sample pictures, writes a caption and sends. |
+| **Share a location** | Opens the `+` menu, chooses **Location**, follows four steps and sends a map-pin card (a sample place, or the real position if the browser is allowed). |
+| **Spot a scam** | Pastes any message and gets a risk score, highlighted warning phrases, plain reasons and safe next steps. A practice tab has fictional examples. |
+| **Block a scammer** | Blocks and reports the "Prize Centre" practice contact and learns why. |
+| **My progress** | Sees skill milestones, a progress ring and charts (activity, skills split, skill by skill). |
+| **Settings** | Sets text size (90% to 125%), higher contrast, reduced motion and read-aloud (voice, language, speed). |
 
-Node.js provides the JavaScript runtime used by npm and the Vite development/build tooling. Three.js is not currently part of the application; 3D should only be introduced if it materially improves a learning task.
+## What is real and what is simulated
 
-## Getting started
+| Area | Status |
+|---|---|
+| Scam checker | **Works for real.** Rule-based, runs entirely in the browser. |
+| Photo picking and previews | **Works for real.** Gallery, camera and drag and drop use real files, kept in the browser. |
+| Location in the chat | **Works for real** when the learner allows the browser to share their position. Otherwise a sample place is used. |
+| Read-aloud | **Works for real** through the browser Web Speech API. Available voices depend on the device. |
+| Settings and progress | **Works for real.** Saved in this browser with `localStorage`. |
+| Chat contacts and replies | **Simulated.** Replies come from a local rule-based engine, not real people and not live AI. |
+| Delivery and read ticks | **Simulated.** Timed to feel realistic. |
+| Sending a photo or location | **Simulated.** Nothing is uploaded or sent to anyone. |
+| WhatsApp, banking, accounts | **Not connected.** No real integration of any kind. |
+| Guided companion | **Predefined.** Keyword matching on written guidance, not an AI model. |
+
+## Setup and run
 
 ### Requirements
-- Node.js LTS (npm is included)
-- Git (for cloning and version control)
 
-### Install and run
+- [Node.js](https://nodejs.org/) LTS (version 18 or newer) with npm
+- [Git](https://git-scm.com/)
+
+### Install and start
 
 ```bash
-git clone https://github.com/yumna-09/practice-karo.git
-cd practice-karo
+git clone https://github.com/yumna-09/digital-dost.git
+cd digital-dost
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite, usually `http://localhost:5173`.
+Open the address Vite prints, usually `http://localhost:5173`.
 
-### Quality checks
+### Other scripts
 
-```bash
-npm run lint
-npm run build
-```
+| Command | Description |
+|---|---|
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-Both checks should be run after pulling the latest changes and before merging or deploying. A successful build does not replace browser-based functional, responsive, and accessibility testing. The visual refresh in this working copy has not yet been verified in a browser or deployed.
+### Trying the main flow (about 2 minutes)
 
-## Repository structure
+1. Open **WhatsApp practice** and send Ayesha a message.
+2. Tap `+` and try **Photos** and **Location**.
+3. Open the **Prize Centre** chat, tap **Check this message**, then block the sender.
+4. Open **My progress** to see skills unlock and the charts fill in.
+
+No login or test account is needed.
+
+## Technology stack and dependencies
+
+| Technology | Purpose |
+|---|---|
+| React 19 | User interface |
+| Vite | Dev server and build |
+| JavaScript (ES modules) | Application logic |
+| CSS | Design system and responsive layout |
+| lucide-react | Icons |
+| `@fontsource-variable/inter` | Interface font (self-hosted) |
+| `@fontsource-variable/plus-jakarta-sans` | Headings and brand font (self-hosted) |
+| `@fontsource-variable/lora` | Accent font (self-hosted) |
+| Web Speech API | Optional read-aloud |
+| Geolocation API | Optional real location in the location lesson |
+| `localStorage` | Preferences and progress |
+
+There is no backend, database or external API. Exact versions are in `package.json`.
+
+## Project structure
 
 ```text
-practice-karo/
-├── public/                 # Static assets
+digital-dost/
+├── brain/security/        # Security notes and checklists used during development
+├── public/                # Favicon, icons, manifest, robots.txt, sitemap.xml
 ├── src/
-│   ├── App.jsx             # Main application and learning flows
-│   ├── App.css             # Component styling and design system
-│   ├── index.css           # Global styles
-│   └── main.jsx            # React entry point
-├── index.html              # Document metadata and app mount
-├── package.json            # Dependencies and scripts
-├── package-lock.json       # Dependency lockfile
-├── vite.config.js          # Vite configuration
-├── DESIGN.md               # Product visual and interaction rules
-├── PRODUCT.md              # Product principles and audience
-└── README.md               # Project documentation
+│   ├── components/        # Conversation, MediaSheet, LocationSheet, shared UI
+│   ├── hooks/             # useChats (simulated chats), useSpeech (read-aloud)
+│   ├── lib/               # replyEngine, scamEngine, samples, milestones, format
+│   ├── pages/             # Home, WhatsApp, Photo, Scam, Progress, Settings
+│   ├── styles/            # base.css (tokens, glass), app.css (layout, pages)
+│   ├── App.jsx            # App shell, navigation, preferences, milestones
+│   └── main.jsx           # Entry point and font imports
+├── index.html             # Meta tags, Open Graph, JSON-LD
+├── DESIGN.md              # Visual and interaction rules
+├── PRODUCT.md             # Audience, scope and principles
+└── README.md
 ```
 
-## Safety, privacy, and limitations
+## Design and accessibility
 
-Digital Dost is an educational prototype. Its practice interfaces are simulated and do not connect to WhatsApp, contacts, banking, payment, or identity services.
+A cream **liquid-glass** interface with three core colours.
 
-- Do not enter real passwords, PINs, OTPs, banking details, or private messages.
-- The companion uses predefined local responses; it does not provide professional or emergency support.
-- Scam examples are fictional and are not a live detection or verification service.
-- Local image attachments are previewed in the browser only; they are not uploaded to a server.
-- Settings and progress are stored locally. Clearing browser data or changing devices may remove or make this information unavailable.
-- No login, cloud sync, backend, or production account system is currently implemented.
-- Device voice availability and speech pronunciation are not guaranteed.
-- Roman Urdu speech coverage is limited to curated phrases; arbitrary text is not translated.
+| Token | Hex | Use |
+|---|---|---|
+| Cream | `#F5EFE4` | Background |
+| Mushroom | `#B8A99A` | Neutrals, tints, icon chips, borders |
+| Dark Root | `#3A2D25` | Text, primary buttons, active navigation |
 
-## Development workflow
+### Accessibility choices
 
-1. Create a focused feature branch from `main`.
-2. Read `DESIGN.md` and `PRODUCT.md` before changing product UI or behaviour.
-3. Implement a cohesive, testable change.
-4. Update this README whenever features, dependencies, setup, limitations, or workflows change.
-5. Run lint and production build checks, then test the affected flows in a browser.
-6. Open a pull request with a concise summary, testing evidence, and known limitations.
-7. Merge only after review and explicit team approval.
+- Text size control from 90% to 125% with no clipped controls
+- Higher-contrast mode, and reduced motion (also follows the OS setting)
+- Visible keyboard focus, a skip link and labelled controls
+- Touch targets of about 44px or larger
+- Safety status is always written in words and icons, never by colour alone
+- Optional read-aloud with pause and stop
+
+Full rules are in [`DESIGN.md`](DESIGN.md) and [`PRODUCT.md`](PRODUCT.md).
+
+## Privacy and safety
+
+- Everything runs in the browser. Photos, locations, messages and settings are never uploaded.
+- The app never asks for real OTPs, PINs, passwords or banking details, and tells learners not to type them.
+- Scam examples are fictional. The scam checker is a helper, not a verification service, and cannot promise a message is safe.
+- The app never implies that a real message, payment or account action happened.
+
+## Known limitations
+
+- All chat contacts, replies, delivery ticks and sent items are **simulated**. Chats reset when the page reloads.
+- The companion and contacts use rule-based replies, not a live AI model.
+- The scam checker uses fixed rules. It can miss new tricks and can flag harmless messages.
+- Progress and settings live in one browser profile. There is no login or sync across devices.
+- Roman Urdu read-aloud uses a small phrase list and does not translate arbitrary text.
+- Voices and pronunciation depend on the operating system and browser.
+- The real-location option needs browser permission and a secure origin (`localhost` or HTTPS).
+- The location card shows a drawn pin, not a live map. Opening it launches an external map in a new tab.
+- Automated tests and wider device and accessibility testing are still to do.
+- The app is **not deployed**. It runs locally with `npm run dev`. The site address in `index.html`, `robots.txt` and `sitemap.xml` is a placeholder.
+
+## AI tools and third-party credits
+
+### AI tools used
+
+| Tool | Role |
+|---|---|
+| Claude (Anthropic) | Coding assistance, debugging, interface and colour refinement, and drafting documentation. |
+| ChatGPT (OpenAI) | Additional coding assistance, reviewing implementation ideas and refining documentation. |
+
+The team chose the direction and features, reviewed and tested the work, and can explain and demonstrate every part of the submitted implementation.
+
+### Third-party resources
+
+- [React](https://react.dev/) and [Vite](https://vite.dev/)
+- [Lucide](https://lucide.dev/) icons
+- [Fontsource](https://fontsource.org/) packages for Inter, Plus Jakarta Sans and Lora
+- [MDN Web Docs](https://developer.mozilla.org/) for Web Speech and Geolocation API references
+
+Libraries support our own implementation. No existing complete project was used as the base.
 
 ## Team
 
-- **Yumna Kashif**
-- **Fatima Ali**
-- **Fatima Ashraf**
+**Team Shadowblades**
 
-## Acknowledgements
+- Yumna Kashif
+- Fatima Ali
+- Fatima Ashraf
 
-- [React](https://react.dev/)
-- [Vite](https://vite.dev/)
-- [MDN Web Docs — Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
-- [GitHub](https://github.com/)
-
-## AI-assisted development
-
-AI-assisted tools may support planning, implementation, debugging, and documentation. The team is responsible for reviewing generated code, validating behaviour, testing the product, and accurately representing implemented capabilities.
+Built for **Build4Better, Codesphere 3.0**, organised by the Department of Software Engineering, NED University of Engineering and Technology.
 
 ---
 
-**Digital Dost — small steps, more confidence.**
+**Digital Dost: small steps, more confidence.**
