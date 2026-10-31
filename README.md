@@ -1,221 +1,472 @@
-# Digital Dost
+# Digital Dost — Learn Technology with Confidence
 
-**Team:** Shadowblades  
-**Members:** Yumna Kashif, Fatima Ali, Fatima Ashraf  
-**Event:** Build4Better, Codesphere 3.0 — NED University of Engineering and Technology  
-**Build date:** Saturday, 31 October 2026 (9:00 AM to 5:00 PM PKT)  
-**Project type:** Responsive web app for digital-literacy practice  
-**Built with:** React 19, Vite, CSS, lucide-react
+<p align="center">
 
-> A calm, safe place where parents and grandparents can practise everyday technology, spot scams and build confidence, instead of calling their children every time they get stuck.
+**A Safe Digital Literacy Practice Platform for Parents and Grandparents**
 
----
+</p>
 
-## Submission details
-
-| Item | Details |
-|---|---|
-| **GitHub repository** | [github.com/yumna-09/digital-dost](https://github.com/yumna-09/digital-dost) |
-| **Demo video (max 2 min)** | [Watch the demo](https://drive.google.com/file/d/1R6a5J5DRRDAoKnSuZ6k6sBMAA3wkRipi/view?usp=sharing) |
-| **Pitch deck** | [View the pitch deck](https://docs.google.com/presentation/d/1sb7Dtim4ye80ItaxpeiSt_TMjyO6z-EC/edit?usp=drivesdk&ouid=111669070603267105976&rtpof=true&sd=true) |
+> Small steps, more confidence. A calm and friendly space where people can practise everyday digital tasks, recognize online scams, and become more confident using technology — without fear of making mistakes.
 
 ---
 
-## The problem
+## Project Overview
 
-**Who it is for:** Parents, grandparents and other adults who did not grow up with technology and feel unsure about smartphones, messaging, photos, links and online safety.
+**Digital Dost** is a responsive digital-literacy web application developed to help parents, grandparents, and adults who are less familiar with modern technology.
 
-Many people get stuck on everyday digital tasks that feel simple to younger generations. They may struggle to use a chat app, send a photo or recognise a scam message. When they get stuck, they often call family members for help. Some avoid useful digital tools altogether because they are afraid of making mistakes.
+The platform provides a safe, interactive learning environment where users can practise everyday digital activities through guided simulations, simple instructions, and friendly feedback.
 
-The issue is not intelligence. Technology is often built for people who already speak its language.
+Instead of performing tasks for users, Digital Dost helps them understand and practise each action independently.
 
-## Our solution
+### Key Highlights
 
-Digital Dost is a practice space where learners can try common digital tasks in a clearly labelled simulation, one step at a time, with plain language and no risk.
+- Interactive WhatsApp-style messaging practice.
+- Guided photo and location-sharing lessons.
+- Rule-based scam detection and safety guidance.
+- Practice contact blocking and reporting.
+- Interactive learning progress dashboard.
+- Accessibility-focused interface and settings.
+- Optional voice-based read-aloud assistance.
+- Privacy-first browser-based functionality.
 
-The app explains what an action does **before** asking the learner to do it, then provides friendly feedback afterwards.
+---
 
-It brings people closer to technology instead of doing things for them.
+## Project Information
 
-### Product principles
-
-- **Teach one task at a time.**
-- **Explain first, then practise.** No judgement; repetition is welcome.
-- **Safe by design.** Nothing connects to real accounts, banks or contacts.
-- **Honest.** The app always says what is local, predefined or simulated.
-
-## Core features
-
-| Feature | What the learner does |
+| Category | Details |
 |---|---|
-| **Learning home** | Picks a task from a clear start page and sees their progress. |
-| **WhatsApp practice** | Chats with four practice contacts (a friend, a cousin, a guide and a scam sender). Sees typing indicators, sent / delivered / read ticks, unread badges and an emoji picker. |
-| **Share a photo** | Follows a four-step lesson, then adds pictures from the gallery, the camera, drag and drop or sample pictures, writes a caption and sends. |
-| **Share a location** | Opens the `+` menu, chooses **Location**, follows four steps and sends a map-pin card (a sample place, or the real position if the browser is allowed). |
-| **Spot a scam** | Pastes any message and gets a risk score, highlighted warning phrases, plain reasons and safe next steps. A practice tab has fictional examples. |
-| **Block a scammer** | Blocks and reports the "Prize Centre" practice contact and learns why. |
-| **My progress** | Sees skill milestones, a progress ring and charts (activity, skills split, skill by skill). |
-| **Settings** | Sets text size (90% to 125%), higher contrast, reduced motion and read-aloud (voice, language, speed). |
+| **Project Name** | Digital Dost |
+| **Team** | Shadowblades |
+| **Event** | Build4Better — Codesphere 3.0 |
+| **Institution** | NED University of Engineering and Technology |
+| **Project Type** | Interactive Digital Literacy Web Application |
+| **Development Date** | October 31, 2026 |
+| **Frontend** | React 19 |
+| **Build Tool** | Vite |
+| **Styling** | CSS3 |
+| **Icons** | Lucide React |
+| **Status** | Hackathon Prototype |
 
-## What is real and what is simulated
+---
 
-| Area | Status |
+## Project Links
+
+| Resource | Link |
 |---|---|
-| Scam checker | **Works for real.** Rule-based, runs entirely in the browser. |
-| Photo picking and previews | **Works for real.** Gallery, camera and drag and drop use real files, kept in the browser. |
-| Location in the chat | **Works for real** when the learner allows the browser to share their position. Otherwise a sample place is used. |
-| Read-aloud | **Works for real** through the browser Web Speech API. Available voices depend on the device. |
-| Settings and progress | **Works for real.** Saved in this browser with `localStorage`. |
-| Chat contacts and replies | **Simulated.** Replies come from a local rule-based engine, not real people and not live AI. |
-| Delivery and read ticks | **Simulated.** Timed to feel realistic. |
-| Sending a photo or location | **Simulated.** Nothing is uploaded or sent to anyone. |
-| WhatsApp, banking, accounts | **Not connected.** No real integration of any kind. |
-| Guided companion | **Predefined.** Keyword matching on written guidance, not an AI model. |
+| **GitHub Repository** | [Digital Dost](https://github.com/yumna-09/digital-dost) |
+| **Demo Video** | [Watch Project Demo](https://drive.google.com/file/d/1R6a5J5DRRDAoKnSuZ6k6sBMAA3wkRipi/view?usp=sharing) |
+| **Pitch Deck** | [View Presentation](https://docs.google.com/presentation/d/1sb7Dtim4ye80ItaxpeiSt_TMjyO6z-EC/edit?usp=drivesdk&ouid=111669070603267105976&rtpof=true&sd=true) |
 
-## Setup and run
+---
 
-### Requirements
+## The Problem
 
-- [Node.js](https://nodejs.org/) LTS (version 18 or newer) with npm
-- [Git](https://git-scm.com/)
+Technology has become an essential part of everyday life, but not everyone feels comfortable using it.
 
-### Install and start
+Parents, grandparents, and other adults who did not grow up with smartphones and digital applications may struggle with:
 
-```bash
-git clone https://github.com/yumna-09/digital-dost.git
-cd digital-dost
-npm install
-npm run dev
-```
+- Sending messages and sharing photos.
+- Understanding messaging applications.
+- Sharing their location.
+- Recognizing suspicious links and scam messages.
+- Managing unfamiliar digital features.
+- Understanding online privacy and security.
 
-Open the address Vite prints, usually `http://localhost:5173`.
+When these challenges arise, many people depend on younger family members for assistance. Others avoid digital services because they are afraid of making mistakes.
 
-### Other scripts
+**The problem is not a lack of intelligence. It is the lack of accessible, patient, and practical learning experiences.**
 
-| Command | Description |
+---
+
+## Our Solution
+
+Digital Dost transforms everyday digital activities into guided practice experiences.
+
+Users can explore common smartphone interactions in a safe simulation, learn what each action does, and practise repeatedly without worrying about affecting real accounts or sending information to other people.
+
+### Our Core Principles
+
+1. **Learn One Step at a Time** — Break unfamiliar tasks into simple, manageable steps.
+2. **Explain Before Practising** — Help users understand an action before they perform it.
+3. **Safe by Design** — Keep practice activities separate from real accounts and services.
+4. **Encourage Independence** — Build confidence instead of creating dependency.
+5. **Keep Technology Accessible** — Use clear language, readable interfaces, and friendly guidance.
+
+---
+
+## Features and Functionality
+
+### 1. Learning Home
+
+- Simple starting dashboard.
+- Easy access to learning activities.
+- Overview of completed activities.
+- Progress indicators and skill milestones.
+
+### 2. WhatsApp Practice
+
+A simulated messaging environment where users can practise everyday conversations.
+
+**Features include:**
+
+- Four predefined practice contacts.
+- Sending and receiving simulated messages.
+- Typing indicators.
+- Sent, delivered, and read indicators.
+- Unread message badges.
+- Emoji picker.
+- Friendly, rule-based responses.
+- Block and report functionality for suspicious contacts.
+
+### 3. Photo Sharing Practice
+
+A guided four-step learning experience that teaches users how to share pictures.
+
+**Supported interactions:**
+
+- Select photos from the device gallery.
+- Use the camera where browser permissions and device support allow.
+- Drag and drop images.
+- Choose sample pictures.
+- Add captions.
+- Practise sending a photo.
+
+### 4. Location Sharing Practice
+
+Teaches users how to share a location through a familiar messaging interface.
+
+- Open the attachment menu.
+- Select Location.
+- Follow the guided instructions.
+- Use a sample location or browser-provided position.
+- Practise sending a location card.
+
+### 5. Scam Detection
+
+Helps users understand potentially suspicious messages.
+
+**Capabilities:**
+
+- Paste a message for analysis.
+- Receive a rule-based risk score.
+- Identify suspicious phrases.
+- Understand possible warning signs.
+- Read simple explanations.
+- Explore safer next steps.
+- Practise with fictional scam examples.
+
+### 6. Block and Report
+
+Users can practise responding to suspicious contacts.
+
+- Identify the fictional Prize Centre scam contact.
+- Block the sender.
+- Practise reporting suspicious activity.
+- Understand why blocking and reporting can help.
+
+### 7. My Progress
+
+A dedicated dashboard for tracking learning activities.
+
+**Includes:**
+
+- Skill milestones.
+- Visual progress ring.
+- Activity charts.
+- Skill distribution.
+- Individual skill progress.
+
+### 8. Accessibility and Settings
+
+The application provides several options to make learning more comfortable.
+
+- Adjustable text size (90%–125%).
+- Higher-contrast mode.
+- Reduced-motion preference.
+- Optional read-aloud functionality.
+- Voice selection where supported.
+- Language and speech-speed settings.
+
+---
+
+## What Works and What Is Simulated?
+
+Transparency is an important part of Digital Dost. The application clearly distinguishes actual browser functionality from simulated experiences.
+
+| Functionality | Implementation |
 |---|---|
-| `npm run build` | Production build into `dist/` |
-| `npm run preview` | Serve the production build locally |
-| `npm run lint` | Run ESLint |
+| Scam checker | Real, browser-based rule engine |
+| Photo selection | Real browser file handling |
+| Camera access | Browser-supported camera functionality |
+| Location access | Browser Geolocation API, with permission |
+| Read-aloud | Browser Web Speech API |
+| Settings and progress | Browser localStorage |
+| Chat contacts | Simulated |
+| Chat replies | Local rule-based engine |
+| Delivery and read indicators | Simulated |
+| Photo and location sending | Simulated |
+| WhatsApp integration | Not connected |
+| Banking integration | Not connected |
+| AI companion | Predefined keyword-based guidance |
 
-### Trying the main flow (about 2 minutes)
+**Important:** Digital Dost does not connect to real WhatsApp accounts, banking services, or personal contacts. Practice messages and sharing activities do not send anything to external recipients.
 
-1. Open **WhatsApp practice** and send Ayesha a message.
-2. Tap `+` and try **Photos** and **Location**.
-3. Open the **Prize Centre** chat, tap **Check this message**, then block the sender.
-4. Open **My progress** to see skills unlock and the charts fill in.
+---
 
-No login or test account is needed.
-
-## Technology stack and dependencies
+## Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| React 19 | User interface |
-| Vite | Dev server and build |
-| JavaScript (ES modules) | Application logic |
-| CSS | Design system and responsive layout |
-| lucide-react | Icons |
-| `@fontsource-variable/inter` | Interface font (self-hosted) |
-| `@fontsource-variable/plus-jakarta-sans` | Headings and brand font (self-hosted) |
-| `@fontsource-variable/lora` | Accent font (self-hosted) |
-| Web Speech API | Optional read-aloud |
-| Geolocation API | Optional real location in the location lesson |
-| `localStorage` | Preferences and progress |
+| React 19 | Component-based user interface |
+| Vite | Development server and production build |
+| JavaScript (ES Modules) | Application logic and interactions |
+| CSS3 | Responsive styling and visual design |
+| Lucide React | Interface icons |
+| Inter | Primary interface typography |
+| Plus Jakarta Sans | Headings and branding |
+| Lora | Accent typography |
+| Web Speech API | Optional read-aloud functionality |
+| Geolocation API | Optional location access |
+| localStorage | Local preferences and progress |
 
-There is no backend, database or external API. Exact versions are in `package.json`.
+### Development Approach
 
-## Project structure
-
-```text
-digital-dost/
-├── brain/security/        # Security notes and checklists used during development
-├── public/                # Favicon, icons, manifest, robots.txt, sitemap.xml
-├── src/
-│   ├── components/        # Conversation, MediaSheet, LocationSheet, shared UI
-│   ├── hooks/             # useChats (simulated chats), useSpeech (read-aloud)
-│   ├── lib/               # replyEngine, scamEngine, samples, milestones, format
-│   ├── pages/             # Home, WhatsApp, Photo, Scam, Progress, Settings
-│   ├── styles/            # base.css (tokens, glass), app.css (layout, pages)
-│   ├── App.jsx            # App shell, navigation, preferences, milestones
-│   └── main.jsx           # Entry point and font imports
-├── index.html             # Meta tags, Open Graph, JSON-LD
-├── DESIGN.md              # Visual and interaction rules
-├── PRODUCT.md             # Audience, scope and principles
-└── README.md
-```
-
-## Design and accessibility
-
-A cream **liquid-glass** interface with three core colours.
-
-| Token | Hex | Use |
-|---|---|---|
-| Cream | `#F5EFE4` | Background |
-| Mushroom | `#B8A99A` | Neutrals, tints, icon chips, borders |
-| Dark Root | `#3A2D25` | Text, primary buttons, active navigation |
-
-### Accessibility choices
-
-- Text size control from 90% to 125% with no clipped controls
-- Higher-contrast mode, and reduced motion (also follows the OS setting)
-- Visible keyboard focus, a skip link and labelled controls
-- Touch targets of about 44px or larger
-- Safety status is always written in words and icons, never by colour alone
-- Optional read-aloud with pause and stop
-
-Full rules are in [`DESIGN.md`](DESIGN.md) and [`PRODUCT.md`](PRODUCT.md).
-
-## Privacy and safety
-
-- Everything runs in the browser. Photos, locations, messages and settings are never uploaded.
-- The app never asks for real OTPs, PINs, passwords or banking details, and tells learners not to type them.
-- Scam examples are fictional. The scam checker is a helper, not a verification service, and cannot promise a message is safe.
-- The app never implies that a real message, payment or account action happened.
-
-## Known limitations
-
-- All chat contacts, replies, delivery ticks and sent items are **simulated**. Chats reset when the page reloads.
-- The companion and contacts use rule-based replies, not a live AI model.
-- The scam checker uses fixed rules. It can miss new tricks and can flag harmless messages.
-- Progress and settings live in one browser profile. There is no login or sync across devices.
-- Roman Urdu read-aloud uses a small phrase list and does not translate arbitrary text.
-- Voices and pronunciation depend on the operating system and browser.
-- The real-location option needs browser permission and a secure origin (`localhost` or HTTPS).
-- The location card shows a drawn pin, not a live map. Opening it launches an external map in a new tab.
-- Automated tests and wider device and accessibility testing are still to do.
-- The app is **not deployed**. It runs locally with `npm run dev`. The site address in `index.html`, `robots.txt` and `sitemap.xml` is a placeholder.
-
-## AI tools and third-party credits
-
-### AI tools used
-
-| Tool | Role |
-|---|---|
-| Claude (Anthropic) | Coding assistance, debugging, interface and colour refinement, and drafting documentation. |
-| ChatGPT (OpenAI) | Additional coding assistance, reviewing implementation ideas and refining documentation. |
-
-The team chose the direction and features, reviewed and tested the work, and can explain and demonstrate every part of the submitted implementation.
-
-### Third-party resources
-
-- [React](https://react.dev/) and [Vite](https://vite.dev/)
-- [Lucide](https://lucide.dev/) icons
-- [Fontsource](https://fontsource.org/) packages for Inter, Plus Jakarta Sans and Lora
-- [MDN Web Docs](https://developer.mozilla.org/) for Web Speech and Geolocation API references
-
-Libraries support our own implementation. No existing complete project was used as the base.
-
-## Team
-
-**Team Shadowblades**
-
-- Yumna Kashif
-- Fatima Ali
-- Fatima Ashraf
-
-Built for **Build4Better, Codesphere 3.0**, organised by the Department of Software Engineering, NED University of Engineering and Technology.
+- Frontend-focused architecture.
+- Reusable React components.
+- Browser-based functionality.
+- No external backend or database.
+- No third-party account integrations.
 
 ---
 
-**Digital Dost: small steps, more confidence.**
+## Design and User Experience
+
+Digital Dost uses a calm, friendly, and minimal visual language designed to make digital learning feel approachable.
+
+### Visual Identity
+
+| Colour | Hex Code | Usage |
+|---|---|---|
+| Cream | `#F5EFE4` | Main background |
+| Mushroom | `#B8A99A` | Neutral surfaces and borders |
+| Dark Root | `#3A2D25` | Text, buttons, and active navigation |
+
+### Interface Highlights
+
+- Cream liquid-glass inspired surfaces.
+- Responsive layouts.
+- Soft visual hierarchy.
+- Clear navigation.
+- Interactive learning components.
+- Friendly feedback states.
+- Consistent typography.
+- Reduced-motion support.
+
+### Accessibility Considerations
+
+- Adjustable text size.
+- Higher-contrast mode.
+- Keyboard navigation support.
+- Visible focus indicators.
+- Skip navigation link.
+- Clearly labelled controls.
+- Touch-friendly interactive elements.
+- Information communicated through text and icons, not colour alone.
+
+---
+
+## Installation and Local Setup
+
+Follow these steps to run Digital Dost on your local machine.
+
+### Prerequisites
+
+Make sure you have installed:
+
+- [Node.js](https://nodejs.org/) — Version 18 or newer.
+- npm — Included with Node.js.
+- [Git](https://git-scm.com/).
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yumna-09/digital-dost.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd digital-dost
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+### 5. Open the Application
+
+Open the local URL displayed in your terminal. The default Vite address is:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Generate the production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint checks |
+
+---
+
+## Quick Demo Guide
+
+You can explore the main application experience in approximately two minutes.
+
+1. Open the **WhatsApp Practice** section.
+2. Select Ayesha and send a practice message.
+3. Open the attachment menu and explore Photos and Location.
+4. Visit the fictional **Prize Centre** conversation.
+5. Use the scam-checking feature to analyse its message.
+6. Practise blocking the suspicious contact.
+7. Open **My Progress** to explore the learning dashboard.
+
+No login or test account is required.
+
+---
+
+## Project Structure
+
+```text
+digital-dost/
+│
+├── brain/
+│   └── security/             # Security notes and checklists
+│
+├── public/                   # Static assets and application metadata
+│
+├── src/
+│   ├── components/           # Shared UI components
+│   ├── hooks/                # Custom React hooks
+│   ├── lib/                  # Application logic and utilities
+│   ├── pages/                # Application pages
+│   ├── styles/               # Global and page-specific styles
+│   ├── App.jsx               # Main application shell
+│   └── main.jsx              # Application entry point
+│
+├── index.html                # HTML entry point and metadata
+├── DESIGN.md                 # Design and interaction guidelines
+├── PRODUCT.md                # Product scope and principles
+├── package.json              # Dependencies and scripts
+├── package-lock.json         # Dependency lockfile
+└── README.md                 # Project documentation
+```
+
+---
+
+## Privacy and Security
+
+Digital Dost follows a privacy-first approach.
+
+- Practice activities run locally in the browser.
+- Photos are not uploaded to an external server.
+- Location information is not transmitted to another user.
+- Messages are not connected to real contacts.
+- The application never requests real OTPs, PINs, passwords, or banking details.
+- Scam examples are fictional.
+- The scam checker is an educational helper, not a guaranteed verification service.
+- The application does not imply that real messages, payments, or account actions have occurred.
+
+---
+
+## Known Limitations
+
+Digital Dost is an interactive prototype, and some limitations are important to understand.
+
+- Chat contacts and replies are simulated.
+- Chat conversations reset after a page reload.
+- The companion uses predefined keyword-based responses rather than a live AI model.
+- Scam detection relies on fixed rules and may miss new scams or flag harmless messages.
+- Progress and preferences are stored locally in the browser.
+- There is no account system or cross-device synchronization.
+- Roman Urdu read-aloud uses a limited phrase list.
+- Available voices and pronunciation depend on the device and browser.
+- Real location access requires browser permission and a secure context.
+- The location card uses a drawn pin rather than an embedded live map.
+- Automated testing and wider device and accessibility testing remain future work.
+
+---
+
+## AI-Assisted Development
+
+AI tools supported the development and documentation workflow.
+
+| Tool | Contribution |
+|---|---|
+| Claude (Anthropic) | Coding assistance, debugging, interface refinement, and documentation |
+| ChatGPT (OpenAI) | Coding assistance, implementation discussions, and documentation refinement |
+
+The team remained responsible for project direction, feature decisions, implementation review, testing, and understanding the submitted work.
+
+AI-assisted development was used as a supporting workflow rather than a replacement for the team's technical understanding.
+
+---
+
+## Team Shadowblades
+
+Developed by **Team Shadowblades** for Build4Better, Codesphere 3.0.
+
+| Team Member |
+|---|
+| Yumna Kashif |
+| Fatima Ali |
+| Fatima Ashraf |
+
+**Event:** Build4Better — Codesphere 3.0  
+**Institution:** NED University of Engineering and Technology  
+**Department:** Software Engineering
+
+---
+
+## Third-Party Resources
+
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [Lucide](https://lucide.dev/)
+- [Fontsource](https://fontsource.org/)
+- [MDN Web Docs](https://developer.mozilla.org/)
+
+---
+
+## Our Vision
+
+We believe technology should make life easier for everyone, regardless of age or previous experience.
+
+Digital Dost is built around one simple idea:
+
+**People should feel confident using technology, not afraid of it.**
+
+---
+
+<p align="center">
+
+### Digital Dost
+
+**Small steps. More confidence. A safer digital world.**
+
+Built with care by **Team Shadowblades**.
+
+</p>
