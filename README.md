@@ -15,10 +15,10 @@ Digital Dost is a guided digital-literacy experience for parents, grandparents, 
 | Event | Build4Better — Codesphere 3.0 |
 | Team | Yumna Kashif, Fatima Ali, Fatima Ashraf |
 | Application | Responsive React web application |
-| Repository | [yumna-09/practice-karo](https://github.com/yumna-09/practice-karo) |
-| Development branch | `digital-dost-completion` |
+| Repository | [fatimaashraf3/digital-dost](https://github.com/fatimaashraf3/digital-dost) |
+| Development branch | Local working copy; changes have not been pushed |
 | Deployment | Not yet verified |
-| Status | Active MVP development; local QA required |
+| Status | Glass UI, live practice chat, scam checker and media sharing implemented; lint and build pass, desktop and mobile layouts checked in headless Chromium |
 
 ## Product principles
 
@@ -34,18 +34,20 @@ Digital Dost is a guided digital-literacy experience for parents, grandparents, 
 The home screen provides a task-oriented starting point and suggested topics. The companion currently uses local, predefined guidance and keyword matching. It is not connected to a live AI model or external AI API.
 
 ### WhatsApp practice
-A fictional chat allows learners to practise writing a reply. The image attachment interaction accepts a local image (up to 5 MB), previews it in the browser, and adds it to the simulated conversation. It does not upload the image or send a real message.
+Four simulated contacts (Ayesha, Cousin Bilal, Dost Coach and a scam-practice "Prize Centre") reply in real time with typing indicators, sent/delivered/read ticks, unread badges and an emoji picker. Replies come from a local rule-based engine (`src/lib/replyEngine.js`), not a live AI and not real people. Learners can attach photos, block and report the scam contact, and tap "Check this message" to send a suspicious message to the scam checker. Chats live in memory and reset on reload.
 
-### Scam Detective
-A set of fictional examples teaches warning signs such as urgency, suspicious links, unexpected prizes, requests for credentials, and unusual payment requests. This is a learning exercise, not automated scam detection.
+### Share a photo
+A guided four-step lesson beside a live practice chat. The **Add media** sheet supports gallery selection (multiple), camera capture on phones, drag and drop, built-in sample pictures, captions, up to six pictures at a time (8 MB each) and an enlarged preview. Images stay in the browser; nothing is uploaded.
+
+### Spot a scam
+Paste any message and get a risk score, a verdict (very likely a scam / suspicious / no common warning signs), highlighted phrases, plain-language reasons and safe next steps. It is a **rules-based, on-device helper** (`src/lib/scamEngine.js`) covering urgency, threats, prizes, OTP/PIN/CNIC requests, money requests, shortened links, impersonation, "new number" tricks and investment promises, including common Pakistani context (Easypaisa, JazzCash, BISP, HBL, CNIC). It cannot guarantee a message is safe and is not a live AI service. A second tab keeps the fictional practice quiz.
 
 ### Learning progress
 Practice and review counters are stored in browser local storage. They are local to the current browser profile and are not synchronised between devices.
 
 ### Accessibility and preferences
-The current settings interface includes:
-- Light and dark themes.
-- Standard, large, and extra-large text options.
+The settings interface includes:
+- A draggable 90%-125% text-size control.
 - A higher-contrast preference.
 - A reduced-motion preference.
 - Read-aloud on/off, pause/resume, and stop controls.
@@ -60,9 +62,11 @@ Speech is provided by the browser Web Speech API. Available voices and pronuncia
 | React 19 | Component-based user interface |
 | JavaScript (ES modules) | Application logic |
 | Vite | Development server and production build |
-| CSS | Layout, responsive styling, themes, and accessibility preferences |
+| CSS | Responsive teal glassmorphism design system and accessibility preferences |
+| lucide-react | Icon set |
+| @fontsource (Manrope, DM Sans) | Self-hosted fonts |
 | Browser Web Speech API | Device-provided speech synthesis |
-| Browser FileReader | Local image preview in the practice simulator |
+| Browser object URLs and file inputs | Local image preview, gallery, camera and drag-and-drop |
 | Local storage | Guest preferences and demo progress |
 | Git and GitHub | Version control and collaboration |
 
@@ -92,7 +96,7 @@ npm run lint
 npm run build
 ```
 
-Both checks should be run after pulling the latest changes and before merging or deploying. A successful build does not replace browser-based functional, responsive, and accessibility testing.
+Both checks should be run after pulling the latest changes and before merging or deploying. A successful build does not replace browser-based functional, responsive, and accessibility testing. The visual refresh in this working copy has not yet been verified in a browser or deployed.
 
 ## Repository structure
 

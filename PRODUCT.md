@@ -19,16 +19,18 @@ Learn technology. Practise safely. Stay independent.
 ## MVP areas
 - Learning home with clear task entry points.
 - Guided digital companion with contextual, step-based help.
-- Simulated messaging practice, including local-only image preview.
-- Scam Detective with fictional examples and explanations.
-- Local learning progress.
+- WhatsApp practice: simulated contacts that reply in real time (typing indicator, delivery and read ticks), emoji, and media attachments.
+- Share a photo: guided lesson with gallery, camera, drag-and-drop and sample pictures, captions and previews (local only).
+- Spot a scam: on-device, rules-based message checker with highlighted warning signs, plus fictional practice examples.
+- Local learning progress based on skills practised.
 - English-first interface.
 - Accessibility preferences: text size, contrast, theme, reduced motion, and optional read-aloud.
 
 ## Out of scope for the current MVP
 - Real WhatsApp or other messaging integrations.
 - Banking transactions or real financial accounts.
-- Live analysis of private messages or attachments.
+- Server-side or AI analysis of private messages or attachments. The scam checker runs only in the browser and nothing is uploaded.
+- Real multi-user messaging. Practice contacts are simulated.
 - Login, cloud accounts, and cross-device synchronisation.
 - Claims of fully translated Roman Urdu speech without a verified translation service.
 - Live AI model integration unless a safe, affordable, privacy-reviewed service is deliberately selected.

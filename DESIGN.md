@@ -4,29 +4,25 @@
 Design a calm, capable, respectful learning environment for adults who may be new to everyday digital tools. The interface must feel like a thoughtfully designed learning product, not a generic AI chat template.
 
 ## Visual direction
-- Warm ivory and parchment foundations with grounded forest-green actions.
-- Sage is a supporting colour, not the only source of contrast.
-- Use restrained terracotta for focus indicators and meaningful highlights.
-- Avoid washed-out pastel text, low-contrast grey, purple gradients, excessive glass effects, nested cards, and decorative icon tiles above every heading.
-- Prefer clear surfaces, strong hierarchy, generous whitespace, and subtle borders over stacks of cards.
+- Cream (#F6EEDC) liquid-glass workspace with dark-root (#3A2A21) text and mushroom (#A39382) neutrals, inspired by the supplied Dribbble reference (floating glass rail, chat list and conversation panes).
+- Frosted glass panels (blur + saturate, soft inner highlight, quiet borders) over soft blurred colour orbs.
+- Warm amber is the contrasting action colour; cream is the text colour; mint marks safe/online/success; coral marks danger.
+- Chat remains the primary focal point; supporting actions stay compact.
+- Motion is purposeful: entrance rise, message pop, typing dots, button shine, risk gauge fill, scan line. All motion stops under reduced-motion settings.
 
 ## Core colour tokens
 | Token | Hex | Use |
 |---|---|---|
-| Background | #EEE9DF | Main canvas |
-| Surface | #FFFDF8 | Primary panels |
-| Surface soft | #E3E8DC | Supporting surfaces |
-| Text | #24362D | Body and headings |
-| Muted text | #526356 | Secondary copy; verify contrast by size |
-| Primary | #315C45 | Main actions and active states |
-| Primary hover | #244B37 | Hover and pressed states |
-| Border | #CBD3C5 | Dividers and boundaries |
-| Accent | #B66B43 | Focus and selective emphasis |
-| Dark background | #17231C | Dark theme canvas |
-| Dark surface | #24352A | Dark theme panels |
+| Canvas teal | #315C63 | Main background |
+| Deep teal | #1B3A40 | Depth and shadows |
+| Warm cream | #F8F3E8 | Text and icons |
+| Amber | #FFC766 | Primary buttons, active navigation, accents |
+| Ink | #15353A | Text on amber |
+| Mint | #8EF0C5 | Safe, online, success |
+| Coral | #FF9E8A | Warnings and danger |
 
 ## Typography
-- Use DM Sans for interface text and Manrope for selected display headings.
+- Use Inter for interface text, Plus Jakarta Sans for headings, Lora for accents (self-hosted via @fontsource, no external requests).
 - Body text should be comfortable at 16px or larger where practical.
 - Avoid tiny labels. Essential instructions must remain readable on laptop and mobile.
 - Use sentence case for navigation and controls; reserve uppercase for short, secondary eyebrow labels.
@@ -45,7 +41,7 @@ Design a calm, capable, respectful learning environment for adults who may be ne
 - Never communicate safety status through colour alone.
 - Provide meaningful labels for inputs, buttons, and attachment previews.
 - Use plain language and short step-by-step instructions.
-- Make text resizing available without clipping or hiding controls.
+- Make text resizing available through the draggable 90%–125% text-size control without clipping or hiding controls.
 - Read-aloud must be optional and controllable, with pause and stop actions.
 
 ## Product-specific safety
@@ -56,7 +52,7 @@ Design a calm, capable, respectful learning environment for adults who may be ne
 - Do not label keyword-based guidance as live AI.
 
 ## Motion
-Use small transitions only when they clarify state. Avoid autoplaying backgrounds, parallax, cursor-following effects, or unnecessary 3D. React Bits or Three.js components require a clear learning purpose, reduced-motion fallback, and mobile performance check.
+Use small transitions only when they clarify state. Avoid parallax, cursor-following effects, or unnecessary 3D. The slow background orbs are CSS-only and disabled by reduced motion. React Bits or Three.js components require a clear learning purpose, reduced-motion fallback, and mobile performance check.
 
 ## Quality gate
 Before a UI change is considered ready:
